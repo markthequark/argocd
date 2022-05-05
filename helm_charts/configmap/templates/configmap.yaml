@@ -1,8 +1,12 @@
+{{- define "configmap.data" -}}
+  {{- range $key, $val := .Values.data -}}
+    {{ $key }}: {{ $val }}
+  {{- end -}}
+{{- end -}}
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Values.name }}
 data:
-  {{- range $key, $val := .Values.data -}}
-    {{ $key }}: {{ $val }}
-  {{- end -}}
+  {{- include "configmap.data" . | nindent 2 }}
