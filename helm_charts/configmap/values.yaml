@@ -4,3 +4,6 @@
 
 name: notset
 data: {}
+image:
+  name: notset
+  tag: notset

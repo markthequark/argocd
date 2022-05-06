@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: {{ .Values.name }}-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+#    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  ttlSecondsAfterFinished: 90
+  template:
+    spec:
+      containers:
+        - name: {{ .Values.image.name }}
+          image: {{ .Values.image.name }}:{{ .Values.image.tag }}
+      restartPolicy: Never
