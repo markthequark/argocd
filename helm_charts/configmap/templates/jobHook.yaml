@@ -13,4 +13,6 @@ spec:
         - name: main
           image: {{ .Values.image.name }}:{{ .Values.image.tag }}
           imagePullPolicy: Always
+      imagePullSecrets:
+      - name: dockerconfigjson-github-com
       restartPolicy: Never
