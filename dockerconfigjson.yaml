@@ -1,0 +1,10 @@
+kind: Secret
+type: kubernetes.io/dockerconfigjson
+apiVersion: v1
+metadata:
+  name: dockerconfigjson-github-com
+  namespace: argocd
+  labels:
+    app: app-name
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJnaGNyLmlvIjp7ImF1dGgiOiJiV0Z5YTNSb1pYRjFZWEpyT21kb2NGOU1UMUoyZEZGNGFuUkhOSEZIY0hka2JsVlRkR3BLVmpGeE9YQjBRVk15WWpZNFVHRT0ifX19
