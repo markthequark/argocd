@@ -12,4 +12,5 @@ spec:
       containers:
         - name: main
           image: {{ .Values.image.name }}:{{ .Values.image.tag }}
+          imagePullPolicy: Always
       restartPolicy: Never
