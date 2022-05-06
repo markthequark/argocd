@@ -9,6 +9,6 @@ spec:
   template:
     spec:
       containers:
-        - name: {{ .Values.image.name }}
+        - name: main
           image: {{ .Values.image.name }}:{{ .Values.image.tag }}
       restartPolicy: Never
