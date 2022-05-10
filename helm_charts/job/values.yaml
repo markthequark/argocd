@@ -1,0 +1,8 @@
+# Default values for job.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: notset
+image:
+  name: notset
+  tag: notset
